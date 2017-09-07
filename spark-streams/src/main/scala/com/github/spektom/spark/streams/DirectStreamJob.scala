@@ -1,10 +1,9 @@
-package com.github.spektom.spark.streams.direct
+package com.github.spektom.spark.streams
 
-import com.github.spektom.spark.streams.Application
-import org.apache.spark.streaming.StreamingContext
 import org.apache.spark.streaming.dstream.InputDStream
+import org.apache.spark.streaming.{DirectNumInputDStream, StreamingContext}
 
-object Job {
+object DirectStreamJob {
 
   def main(args: Array[String]): Unit = {
     new Application {

@@ -1,10 +1,9 @@
-package com.github.spektom.spark.streams.receiver
+package com.github.spektom.spark.streams
 
-import com.github.spektom.spark.streams.Application
-import org.apache.spark.streaming.StreamingContext
 import org.apache.spark.streaming.dstream.InputDStream
+import org.apache.spark.streaming.{NumInputDStream, StreamingContext}
 
-object Job {
+object ReceiverStreamJob {
 
   def main(args: Array[String]): Unit = {
     new Application {

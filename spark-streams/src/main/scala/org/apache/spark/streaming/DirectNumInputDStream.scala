@@ -1,13 +1,12 @@
-package com.github.spektom.spark.streams.direct
+package org.apache.spark.streaming
 
 import org.apache.spark.internal.Logging
 import org.apache.spark.rdd.RDD
 import org.apache.spark.streaming.dstream.InputDStream
 import org.apache.spark.streaming.scheduler.StreamInputInfo
-import org.apache.spark.streaming.{StreamingContext, Time}
 
 class DirectNumInputDStream(ssc_ : StreamingContext) extends InputDStream[Int](ssc_)
-    with Logging {
+  with Logging {
 
   override def start(): Unit = {}
 
@@ -15,8 +14,8 @@ class DirectNumInputDStream(ssc_ : StreamingContext) extends InputDStream[Int](s
 
   override def compute(validTime: Time): Option[RDD[Int]] = {
     logWarning(s"Computing next RDD for ${validTime}")
-    val rdd = new NumRDD(ssc_.sparkContext, 1000)
-    //ssc_.scheduler.inputInfoTracker.reportInfo(validTime, StreamInputInfo(id, rdd.count))
-    Some(rdd)
+    val numElements = 1000
+    ssc_.scheduler.inputInfoTracker.reportInfo(validTime, StreamInputInfo(id, numElements))
+    Some(new NumRDD(ssc_.sparkContext, numElements))
   }
 }

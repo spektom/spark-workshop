@@ -1,8 +1,7 @@
-package com.github.spektom.spark.streams.receiver
+package org.apache.spark.streaming
 
 import org.apache.spark.internal.Logging
 import org.apache.spark.storage.StorageLevel
-import org.apache.spark.streaming.StreamingContext
 import org.apache.spark.streaming.dstream.ReceiverInputDStream
 import org.apache.spark.streaming.receiver.Receiver
 

@@ -1,4 +1,4 @@
-package com.github.spektom.spark.streams.direct
+package org.apache.spark.streaming
 
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{Partition, SparkContext, TaskContext}

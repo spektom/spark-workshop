@@ -10,8 +10,8 @@ This project contains to samples for defining custom Spark Streaming input sourc
 
 ### Receiver-based Spark streaming job
 
-      mvn scala:run -DmainClass=com.github.spektom.spark.streams.receiver.Job
+      mvn scala:run -DmainClass=com.github.spektom.spark.streams.ReceiverStreamJob
       
 ### Direct approach Spark streaming job
 
-      mvn scala:run -DmainClass=com.github.spektom.spark.streams.direct.Job
+      mvn scala:run -DmainClass=com.github.spektom.spark.streams.DirectStreamJob
