@@ -15,14 +15,14 @@ class NumReceiver(storageLevel: StorageLevel) extends Receiver[Int](storageLevel
   val running = new AtomicBoolean(true)
 
   override def onStart(): Unit = {
-    logInfo("Start receiving data")
+    logWarning("Start receiving data")
     val executor = Executors.newFixedThreadPool(1)
     executor.submit(this)
     executor.shutdown()
   }
 
   override def onStop(): Unit = {
-    logInfo("Stop receiving data")
+    logWarning("Stop receiving data")
     running.set(false)
   }
 

@@ -4,7 +4,7 @@ spark-streams
 This project contains to samples for defining custom Spark Streaming input sources:
 
  * Receiver-based Input Stream
- * Direct Input Stream 
+ * Direct Input Stream
  
 ## Running
 

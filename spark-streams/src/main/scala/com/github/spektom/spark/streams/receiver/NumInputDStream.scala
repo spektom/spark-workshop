@@ -10,7 +10,7 @@ class NumInputDStream(_ssc: StreamingContext, storageLevel: StorageLevel = Stora
   extends ReceiverInputDStream[Int](_ssc) with Logging {
 
   override def getReceiver(): Receiver[Int] = {
-    logInfo("Creating new receiver")
+    logWarning("Creating new receiver")
     new NumReceiver(storageLevel)
   }
 }
